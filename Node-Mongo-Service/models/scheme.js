@@ -9,9 +9,25 @@ var schemeDataSchema = mongoose.Schema({
 var schemeDataModel = mongoose.model('schemes', schemeDataSchema);
  
 module.exports = schemeDataModel;
-module.exports.getSchemes = function(callback){
-	var lmtcnt = 10;
+module.exports.getSchemes = function(callback,lmtcnt)
+{
+
+// Check if there are documents in the collection
+	var schCount = schemeDataModel.count();
+	
+	if (schCount === 0)
+	{
+		callback(new Error("No Data Found"));
+	}
+	else
+	{
+	
+// Set default limit to 10, if nothing is passed	
+	if(lmtcnt === undefined){lmtcnt=10;}
+	
+// Get the data from MongoDB	
 	schemeDataModel.find(callback).limit(lmtcnt);
+	}
 }
 
 

@@ -1,7 +1,7 @@
 var express = require('express');
 var scheme = require('./models/scheme.js');
 var app = express();
-var lmtcnt =10;
+var lmtcnt;
 var mongoose = require('mongoose');
 
 mongoose.connect('mongodb://localhost/test',{ useMongoClient: true });
@@ -18,14 +18,15 @@ app.get('/',function(req,res){
 // Get scheme code data from MongoDB
 app.get('/getSchemes',function(req,res)
 {
-	scheme.getSchemes(function(err,data)
-			{
+	
+	scheme.getSchemes(function(err,data){
+			
 				if(err){throw err;}
 				else
 				{
 					res.send(data);
 				}
-			});
+			},lmtcnt);
 });
 
 app.listen(3000);
