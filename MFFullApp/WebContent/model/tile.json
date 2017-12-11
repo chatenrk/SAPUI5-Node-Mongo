@@ -1,0 +1,13 @@
+
+{
+    "TileCollection" : [
+        {
+            "id": "schdet",
+            "icon" : "sap-icon://display",
+            "type" : "Monitor",
+            "title" : "Show Scheme Codes",
+            "group":"Display"
+        }
+         
+    ]
+}

@@ -1,0 +1,29 @@
+<mvc:View height="100%" controllerName="mf_fullapp.controller.TilePage"
+    xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:suite="sap.suite" xmlns:layout="sap.ui.layout">
+    <Page title="Mutual Fund Dashboard" enableScrolling="true">
+    <ObjectHeader title="Display">
+        </ObjectHeader>
+       <TileContainer id="container" attachTileAdd="handleTileAdd"
+            tiles="{tile_model>/TileCollection}"
+            height = "40%">
+ 			
+            <StandardTile icon="{tile_model>icon}" type="{tile_model>type}" number="{tile_model>number}"
+                numberUnit="{tile_model>numberUnit}" title="{tile_model>title}" info="{tile_model>info}" infoState="{tile_model>infoState}"
+                press="onTilePressed" />
+             
+        </TileContainer>
+        
+        <ObjectHeader title="Create">
+        </ObjectHeader>
+       <TileContainer id="container1" tileDelete="handleTileDelete"
+            tiles="{tile_model>/TileCollection}"
+            height = "40%">
+ 			
+            <StandardTile icon="{tile_model>icon}" type="{tile_model>type}" number="{tile_model>number}"
+                numberUnit="{tile_model>numberUnit}" title="{tile_model>title}" info="{tile_model>info}" infoState="{tile_model>infoState}"
+                press="onTilePressed" />
+             
+        </TileContainer>
+     
+    </Page>
+</mvc:View>

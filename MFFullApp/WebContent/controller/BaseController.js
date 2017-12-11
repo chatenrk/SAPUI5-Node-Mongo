@@ -6,7 +6,7 @@ sap.ui
 
 					return Controller
 							.extend(
-									"simple_hello.controller.BaseController",
+									"mf_fullapp.controller.BaseController",
 									{
 
 										onInit : function() 
