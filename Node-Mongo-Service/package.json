@@ -1,0 +1,15 @@
+{
+  "name": "node-mongo-service",
+  "version": "1.0.0",
+  "description": "This program is the service that provides data for SAPUI5 app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express.js": "^1.0.0"
+  }
+}
