@@ -1,0 +1,9 @@
+<mvc:View controllerName="simple_hello.controller.test"
+    xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true">
+  
+ <Page title = "{i18n>pagetitle}"
+       >
+   
+ </Page>
+</mvc:View>
