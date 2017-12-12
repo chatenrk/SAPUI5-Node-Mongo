@@ -11,6 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "express.js": "^1.0.0",
+    "fast-csv": "^2.4.1",
+    "json2csv": "^3.11.5",
     "mongoose": "^4.13.6"
   }
 }
